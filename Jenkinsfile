@@ -4,13 +4,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
-
-            steps {
-                git 'https://github.com/anirudh2843/Notes_Automation_Project.git'
-            }
-        }
-
         stage('Install Dependencies') {
 
             steps {
@@ -34,7 +27,7 @@ pipeline {
                 bat '''
                 call venv\\Scripts\\activate
 
-                pytest -n 4 --alluredir=reports/allure-results
+                pytest -n 1 --alluredir=reports/allure-results
                 '''
             }
         }
