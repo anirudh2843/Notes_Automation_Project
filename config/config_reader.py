@@ -10,3 +10,5 @@ class Config:
     EMAIL = os.getenv("EMAIL")
     PASSWORD = os.getenv("PASSWORD")
     BROWSER = os.getenv("BROWSER", "chrome")
+    EXECUTION_ENV = os.getenv("EXECUTION_ENV", "local")
+    GRID_URL = os.getenv("GRID_URL")
