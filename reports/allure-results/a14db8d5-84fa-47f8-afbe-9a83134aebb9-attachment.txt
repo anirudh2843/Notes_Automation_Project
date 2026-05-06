@@ -1,0 +1,28 @@
+2026-05-06 13:16:37,377 | INFO | --------------------------------------------------
+2026-05-06 13:16:37,377 | INFO | START TEST : test_delete_note_api_to_ui
+2026-05-06 13:16:37,377 | INFO | --------------------------------------------------
+2026-05-06 13:16:37,379 | INFO | Clicking on element : ('xpath', "//a[contains(text(),'Login')]")
+2026-05-06 13:16:40,454 | INFO | Successfully clicked : ('xpath', "//a[contains(text(),'Login')]")
+2026-05-06 13:16:40,454 | INFO | Entering text 'dummy11@gmail.com' into : ('id', 'email')
+2026-05-06 13:16:41,098 | INFO | Entering text 'Dummy@123' into : ('id', 'password')
+2026-05-06 13:16:41,471 | INFO | Clicking on element : ('xpath', "//button[@type='submit' and text()='Login']")
+2026-05-06 13:16:42,839 | WARNING | Normal click failed. Using JS click : ('xpath', "//button[@type='submit' and text()='Login']")
+2026-05-06 13:16:42,890 | INFO | Clicking on element : ('xpath', "//button[@data-testid='add-new-note']")
+2026-05-06 13:16:45,300 | WARNING | Normal click failed. Using JS click : ('xpath', "//button[@data-testid='add-new-note']")
+2026-05-06 13:16:45,406 | INFO | Entering text 'Delete Me' into : ('id', 'title')
+2026-05-06 13:16:45,737 | INFO | Entering text 'To be deleted' into : ('id', 'description')
+2026-05-06 13:16:46,305 | INFO | Clicking on element : ('xpath', "//button[contains(text(),'Create')]")
+2026-05-06 13:16:47,510 | WARNING | Normal click failed. Using JS click : ('xpath', "//button[contains(text(),'Create')]")
+2026-05-06 13:16:51,076 | INFO | Calling GET /notes API
+2026-05-06 13:16:51,076 | INFO | Generating API token
+2026-05-06 13:16:52,214 | INFO | Login API Status Code : 200
+2026-05-06 13:16:52,215 | INFO | Token generated successfully
+2026-05-06 13:16:52,651 | INFO | GET /notes Response Code : 200
+2026-05-06 13:16:52,652 | INFO | Deleting note using API : 69faf1e881124e02985ad0d2
+2026-05-06 13:16:52,652 | INFO | Generating API token
+2026-05-06 13:16:53,365 | INFO | Login API Status Code : 200
+2026-05-06 13:16:53,365 | INFO | Token generated successfully
+2026-05-06 13:16:53,738 | INFO | DELETE API Response Code : 200
+2026-05-06 13:16:56,908 | INFO | --------------------------------------------------
+2026-05-06 13:16:56,908 | INFO | END TEST : test_delete_note_api_to_ui
+2026-05-06 13:16:56,909 | INFO | --------------------------------------------------

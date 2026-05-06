@@ -1,0 +1,16 @@
+2026-05-06 13:16:17,814 | INFO | --------------------------------------------------
+2026-05-06 13:16:17,815 | INFO | START TEST : test_delete_note_api
+2026-05-06 13:16:17,815 | INFO | --------------------------------------------------
+2026-05-06 13:16:17,816 | INFO | Calling GET /notes API
+2026-05-06 13:16:17,816 | INFO | Generating API token
+2026-05-06 13:16:18,573 | INFO | Login API Status Code : 200
+2026-05-06 13:16:18,573 | INFO | Token generated successfully
+2026-05-06 13:16:19,289 | INFO | GET /notes Response Code : 200
+2026-05-06 13:16:19,290 | INFO | Deleting note using API : 69fae70881124e02985acaf4
+2026-05-06 13:16:19,290 | INFO | Generating API token
+2026-05-06 13:16:20,109 | INFO | Login API Status Code : 200
+2026-05-06 13:16:20,109 | INFO | Token generated successfully
+2026-05-06 13:16:20,824 | INFO | DELETE API Response Code : 200
+2026-05-06 13:16:20,832 | INFO | --------------------------------------------------
+2026-05-06 13:16:20,832 | INFO | END TEST : test_delete_note_api
+2026-05-06 13:16:20,832 | INFO | --------------------------------------------------

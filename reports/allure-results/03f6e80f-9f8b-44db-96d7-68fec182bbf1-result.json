@@ -1,0 +1,1 @@
+{"name": "test_create_note_empty_title", "status": "passed", "start": 1778059241471, "stop": 1778059256790, "uuid": "863b4d44-53cb-44f4-a6b1-a4d90310d750", "testCaseId": "4ff591a894adaff69fb82e1dc5cac8b7", "fullName": "tests.ui.test_negative_notes#test_create_note_empty_title", "titlePath": ["tests", "ui", "test_negative_notes.py"]}

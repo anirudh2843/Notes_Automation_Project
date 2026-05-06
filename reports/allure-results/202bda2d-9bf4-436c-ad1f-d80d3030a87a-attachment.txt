@@ -1,0 +1,12 @@
+2026-05-06 13:19:37,755 | INFO | --------------------------------------------------
+2026-05-06 13:19:37,758 | INFO | START TEST : test_login_invalid_credentials[-]
+2026-05-06 13:19:37,758 | INFO | --------------------------------------------------
+2026-05-06 13:19:37,758 | INFO | Clicking on element : ('xpath', "//a[contains(text(),'Login')]")
+2026-05-06 13:19:40,186 | INFO | Successfully clicked : ('xpath', "//a[contains(text(),'Login')]")
+2026-05-06 13:19:40,187 | INFO | Entering text '' into : ('id', 'email')
+2026-05-06 13:19:40,611 | INFO | Entering text '' into : ('id', 'password')
+2026-05-06 13:19:40,811 | INFO | Clicking on element : ('xpath', "//button[@type='submit' and text()='Login']")
+2026-05-06 13:19:41,093 | INFO | Successfully clicked : ('xpath', "//button[@type='submit' and text()='Login']")
+2026-05-06 13:19:51,473 | INFO | --------------------------------------------------
+2026-05-06 13:19:51,474 | INFO | END TEST : test_login_invalid_credentials[-]
+2026-05-06 13:19:51,474 | INFO | --------------------------------------------------

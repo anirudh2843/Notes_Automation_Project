@@ -1,0 +1,14 @@
+2026-05-06 13:24:28,735 | INFO | --------------------------------------------------
+2026-05-06 13:24:28,736 | INFO | START TEST : test_login_success
+2026-05-06 13:24:28,737 | INFO | --------------------------------------------------
+2026-05-06 13:24:28,738 | INFO | Clicking on element : ('xpath', "//a[contains(text(),'Login')]")
+2026-05-06 13:24:30,466 | INFO | Successfully clicked : ('xpath', "//a[contains(text(),'Login')]")
+2026-05-06 13:24:30,467 | INFO | Entering text 'dummy1@gmail.com' into : ('id', 'email')
+2026-05-06 13:24:31,047 | INFO | Entering text 'Dummy@123' into : ('id', 'password')
+2026-05-06 13:24:31,316 | INFO | Clicking on element : ('xpath', "//button[@type='submit' and text()='Login']")
+2026-05-06 13:24:31,596 | INFO | Successfully clicked : ('xpath', "//button[@type='submit' and text()='Login']")
+2026-05-06 13:24:42,058 | INFO | --------------------------------------------------
+2026-05-06 13:24:42,058 | INFO | END TEST : test_login_success
+2026-05-06 13:24:42,058 | INFO | --------------------------------------------------
+2026-05-06 13:24:42,447 | ERROR | TEST FAILED : test_login_success
+2026-05-06 13:24:42,637 | INFO | Screenshot captured : screenshots/test_login_success.png

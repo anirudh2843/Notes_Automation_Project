@@ -1,0 +1,23 @@
+2026-05-06 13:17:11,584 | INFO | --------------------------------------------------
+2026-05-06 13:17:11,594 | INFO | START TEST : test_ui_to_api_validation
+2026-05-06 13:17:11,594 | INFO | --------------------------------------------------
+2026-05-06 13:17:11,594 | INFO | Clicking on element : ('xpath', "//a[contains(text(),'Login')]")
+2026-05-06 13:17:12,844 | WARNING | Normal click failed. Using JS click : ('xpath', "//a[contains(text(),'Login')]")
+2026-05-06 13:17:18,700 | INFO | Entering text 'dummy11@gmail.com' into : ('id', 'email')
+2026-05-06 13:17:19,423 | INFO | Entering text 'Dummy@123' into : ('id', 'password')
+2026-05-06 13:17:19,715 | INFO | Clicking on element : ('xpath', "//button[@type='submit' and text()='Login']")
+2026-05-06 13:17:20,078 | INFO | Successfully clicked : ('xpath', "//button[@type='submit' and text()='Login']")
+2026-05-06 13:17:20,079 | INFO | Clicking on element : ('xpath', "//button[@data-testid='add-new-note']")
+2026-05-06 13:17:21,399 | INFO | Successfully clicked : ('xpath', "//button[@data-testid='add-new-note']")
+2026-05-06 13:17:21,400 | INFO | Entering text 'E2E Note' into : ('id', 'title')
+2026-05-06 13:17:21,886 | INFO | Entering text 'UI API validation' into : ('id', 'description')
+2026-05-06 13:17:22,670 | INFO | Clicking on element : ('xpath', "//button[contains(text(),'Create')]")
+2026-05-06 13:17:22,972 | INFO | Successfully clicked : ('xpath', "//button[contains(text(),'Create')]")
+2026-05-06 13:17:25,858 | INFO | Calling GET /notes API
+2026-05-06 13:17:25,859 | INFO | Generating API token
+2026-05-06 13:17:26,531 | INFO | Login API Status Code : 200
+2026-05-06 13:17:26,531 | INFO | Token generated successfully
+2026-05-06 13:17:27,133 | INFO | GET /notes Response Code : 200
+2026-05-06 13:17:27,139 | INFO | --------------------------------------------------
+2026-05-06 13:17:27,141 | INFO | END TEST : test_ui_to_api_validation
+2026-05-06 13:17:27,141 | INFO | --------------------------------------------------
