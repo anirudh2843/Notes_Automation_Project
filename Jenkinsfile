@@ -49,8 +49,8 @@ pipeline {
 
         always {
 
-            archiveArtifacts artifacts: 'screenshots/*.png'
-            archiveArtifacts artifacts: 'logs/*.log'
+            archiveArtifacts(artifacts: 'screenshots/*.png', allowEmptyArchive: true)
+            archiveArtifacts(artifacts: 'logs/*.log', allowEmptyArchive: true)
 
             publishHTML([
                 allowMissing: true,
