@@ -1,0 +1,37 @@
+2026-05-07 22:35:28,058 | INFO | Running tests locally
+2026-05-07 22:35:43,369 | INFO | --------------------------------------------------
+2026-05-07 22:35:43,370 | INFO | START TEST : test_api_to_ui_delete_sync
+2026-05-07 22:35:43,370 | INFO | --------------------------------------------------
+2026-05-07 22:35:43,371 | INFO | Clicking  : ('xpath', "//a[contains(text(),'Login')]")
+2026-05-07 22:35:49,667 | INFO | Successfully clicked : ('xpath', "//a[contains(text(),'Login')]")
+2026-05-07 22:35:49,667 | INFO | Entering text 'dummy11@gmail.com' into : ('id', 'email')
+2026-05-07 22:35:50,369 | INFO | Entering text 'Dummy@123' into : ('id', 'password')
+2026-05-07 22:35:50,992 | INFO | Clicking  : ('xpath', "//button[@type='submit' and text()='Login']")
+2026-05-07 22:35:51,516 | INFO | Successfully clicked : ('xpath', "//button[@type='submit' and text()='Login']")
+2026-05-07 22:35:51,516 | INFO | Clicking  : ('xpath', "//button[@data-testid='add-new-note']")
+2026-05-07 22:35:58,627 | INFO | Successfully clicked : ('xpath', "//button[@data-testid='add-new-note']")
+2026-05-07 22:35:58,628 | INFO | Entering text 'Delete Me' into : ('id', 'title')
+2026-05-07 22:35:58,984 | INFO | Entering text 'To be deleted' into : ('id', 'description')
+2026-05-07 22:35:59,479 | INFO | Clicking  : ('xpath', "//button[contains(text(),'Create')]")
+2026-05-07 22:35:59,783 | INFO | Successfully clicked : ('xpath', "//button[contains(text(),'Create')]")
+2026-05-07 22:36:04,587 | INFO | Calling GET /notes API
+2026-05-07 22:36:04,587 | INFO | Generating API token
+2026-05-07 22:36:15,167 | INFO | Login API Status Code : 200
+2026-05-07 22:36:15,168 | INFO | Token generated successfully
+2026-05-07 22:36:20,748 | INFO | GET /notes Response Code : 200
+2026-05-07 22:36:20,751 | INFO | Deleting note using API : 69fcc6830fadc10297dc65c6
+2026-05-07 22:36:20,752 | INFO | Generating API token
+2026-05-07 22:36:28,243 | INFO | Login API Status Code : 200
+2026-05-07 22:36:28,243 | INFO | Token generated successfully
+2026-05-07 22:36:34,729 | INFO | DELETE API Response Code : 200
+2026-05-07 22:36:34,729 | INFO | Calling GET /notes API
+2026-05-07 22:36:34,729 | INFO | Generating API token
+2026-05-07 22:36:39,681 | INFO | Login API Status Code : 200
+2026-05-07 22:36:39,682 | INFO | Token generated successfully
+2026-05-07 22:36:46,497 | INFO | GET /notes Response Code : 200
+2026-05-07 22:36:46,504 | INFO | Refreshing page
+2026-05-07 22:36:57,637 | INFO | --------------------------------------------------
+2026-05-07 22:36:57,638 | INFO | END TEST : test_api_to_ui_delete_sync
+2026-05-07 22:36:57,638 | INFO | --------------------------------------------------
+2026-05-07 22:36:57,868 | ERROR | TEST FAILED : test_api_to_ui_delete_sync
+2026-05-07 22:36:57,999 | INFO | Screenshot captured : screenshots/test_api_to_ui_delete_sync.png
