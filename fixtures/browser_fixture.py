@@ -16,6 +16,11 @@ def driver():
 
     if Config.EXECUTION_ENV == "grid":
         logger.info("Running tests on Selenium Grid")
+        # Docker Grid stability settings
+        options.add_argument("--disable-dev-shm-usage")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--window-size=1920,1080")
+        options.add_argument("--headless=new")
         driver = webdriver.Remote(command_executor=Config.GRID_URL, options=options)
     else:
         logger.info("Running tests locally")
