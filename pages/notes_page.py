@@ -26,7 +26,12 @@ class NotesPage(BasePage):
 
     update_save_btn = (By.XPATH, "//button[contains(text(),'Save')]")
 
-    complete_checkbox = (By.XPATH, "(//input[@data-testid='toggle-note-switch'])[1]")
+    complete_checkbox_direct = (
+        By.XPATH,
+        "(//input[@data-testid='toggle-note-switch'])[1]",
+    )
+
+    checkbox_within_card = (By.XPATH, "//input[@data-testid='note-completed']")
 
     title_required_error = (By.XPATH, "//div[contains(text(),'Title is required')]")
 
@@ -48,8 +53,11 @@ class NotesPage(BasePage):
     def delete_note(self):
         self.click(self.delete_btn)
 
-    def complete_note(self):
-        self.click(self.complete_checkbox)
+    def complete_note_within_card(self):
+        self.click(self.checkbox_within_card)
+
+    def update_note_with_checkbox(self):
+        self.click(self.update_save_btn)
 
     def click_view(self):
         self.click(self.view_btn)
