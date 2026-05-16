@@ -12,36 +12,32 @@ A Selenium locator failed.
 Failed Locator:
 {failed_locator}
 
-The failed locator belongs to a LOGIN SUBMIT BUTTON.
-
 Analyze the HTML carefully.
 
-Suggest ONLY XPath locators for the LOGIN BUTTON.
+Suggest alternative XPath or CSS locators
+for the FAILED element.
 
 Rules:
-- Focus only on login submit button
-- Prefer button elements
-- Prefer type='submit'
-- Prefer text()='Login'
-- Return ONLY a valid Python list
+- Prefer stable locators
+- Prefer id
+- Prefer name
+- Prefer data-testid
+- Return ONLY valid Python list
 - Do NOT explain anything
 - Do NOT add markdown
-- Do NOT add comments
+- Focus ONLY on the failed element
 
 HTML:
 {page_source[:15000]}
 
 Example:
 [
-    "//button[contains(text(),'Login')]",
-    "//button[@type='submit']",
-    "//button[@type='submit' and text()='Login']"
+    "//input[@id='email']",
+    "//button[@type='submit']"
 ]
 """
 
-        response = generate_response(
+        return generate_response(
             prompt,
             system_prompt=("You are an expert Selenium locator healing engine."),
         )
-
-        return response

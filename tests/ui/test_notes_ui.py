@@ -13,6 +13,9 @@ def test_create_note_ui(driver):
 
     notes = NotesPage(driver)
 
+    # BREAK ADD BUTTON
+    # notes.add_btn = ("id", "wrong_add_btn")
+
     data = LLMTestDataGenerator.generate_note()
 
     title = data["title"]
