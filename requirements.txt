@@ -6,4 +6,5 @@ python-dotenv
 allure-pytest
 pytest-xdist
 pytest-rerunfailures
-langchain
+openai
+streamlit

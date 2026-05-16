@@ -1,16 +1,22 @@
-from mcp.llm_client import LLMClient
+from mcp.llm_client import generate_response
 
 
 class LLMFailureAnalyzer:
     @staticmethod
-    def analyze(exception):
+    def analyze(error):
         prompt = f"""
+Analyze this Selenium automation failure.
 
-        Analyze Selenium failure:
+Error:
+{error}
 
-        {str(exception)}
+Provide:
+1. Root Cause
+2. Fix Suggestion
+3. Prevention Recommendation
+"""
 
-        Suggest fix.
-        """
-
-        return LLMClient.generate(prompt)
+        return generate_response(
+            prompt,
+            system_prompt=("You are an expert Selenium failure analyzer."),
+        )

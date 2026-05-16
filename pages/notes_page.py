@@ -107,7 +107,7 @@ class NotesPage(BasePage):
                 if text:
                     titles.append(text)
 
-            except:
+            except Exception:
                 continue
 
         return title in titles
@@ -119,7 +119,7 @@ class NotesPage(BasePage):
                 EC.visibility_of_element_located(self.title_required_error)
             ).is_displayed()
 
-        except:
+        except Exception:
             return False
 
     # Get All Note Titles
@@ -133,6 +133,6 @@ class NotesPage(BasePage):
                 text = element.text.strip()
                 if text:
                     titles.append(text)
-            except:
+            except Exception:
                 continue
         return titles

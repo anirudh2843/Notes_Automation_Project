@@ -1,15 +1,47 @@
-class LLMLocatorSuggester:
+from mcp.llm_client import generate_response
+
+
+class LLMLocatorSuggestor:
     @staticmethod
-    def suggest(locator):
-        by, value = locator
+    def suggest_locator(failed_locator, page_source):
+        prompt = f"""
+You are an expert Selenium automation engineer.
 
-        suggestions = []
+A Selenium locator failed.
 
-        if "xpath" in by.lower():
-            suggestions.append("Prefer ID locator")
+Failed Locator:
+{failed_locator}
 
-            suggestions.append("Use data-testid locator")
+The failed locator belongs to a LOGIN SUBMIT BUTTON.
 
-            suggestions.append("Avoid absolute XPath")
+Analyze the HTML carefully.
 
-        return suggestions
+Suggest ONLY XPath locators for the LOGIN BUTTON.
+
+Rules:
+- Focus only on login submit button
+- Prefer button elements
+- Prefer type='submit'
+- Prefer text()='Login'
+- Return ONLY a valid Python list
+- Do NOT explain anything
+- Do NOT add markdown
+- Do NOT add comments
+
+HTML:
+{page_source[:15000]}
+
+Example:
+[
+    "//button[contains(text(),'Login')]",
+    "//button[@type='submit']",
+    "//button[@type='submit' and text()='Login']"
+]
+"""
+
+        response = generate_response(
+            prompt,
+            system_prompt=("You are an expert Selenium locator healing engine."),
+        )
+
+        return response

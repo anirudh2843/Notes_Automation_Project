@@ -1,9 +1,10 @@
+import ast
+
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+
+from mcp.llm_locator_suggester import LLMLocatorSuggestor
 
 from utils.logger import logger
-from mcp.llm_locator_suggester import LLMLocatorSuggester
 
 
 class LocatorHealer:
@@ -11,41 +12,23 @@ class LocatorHealer:
     def heal(driver, locator):
         logger.warning(f"Trying to heal locator : {locator}")
 
-        suggestions = LLMLocatorSuggester.suggest(locator)
+        page_source = driver.page_source
+
+        suggestions = LLMLocatorSuggestor.suggest_locator(locator, page_source)
 
         logger.warning(f"LLM Locator Suggestions : {suggestions}")
 
-        by, value = locator
+        try:
+            suggestions = ast.literal_eval(suggestions)
 
-        possible_locators = []
+        except Exception:
+            suggestions = []
 
-        # LOGIN / CREATE BUTTONS
-        if "button" in value.lower():
-            possible_locators = [
-                (By.XPATH, "//button[contains(text(),'Login')]"),
-                (By.XPATH, "//button[contains(text(),'Create')]"),
-                (By.XPATH, "//button[@type='submit']"),
-            ]
-
-        # TITLE INPUT
-        elif "title" in value.lower():
-            possible_locators = [
-                (By.ID, "title"),
-                (By.NAME, "title"),
-                (By.XPATH, "//input[@id='title']"),
-            ]
-
-        # DESCRIPTION INPUT
-        elif "description" in value.lower():
-            possible_locators = [(By.ID, "description"), (By.NAME, "description")]
-
-        for new_locator in possible_locators:
+        for xpath in suggestions:
             try:
-                element = WebDriverWait(driver, 5).until(
-                    EC.presence_of_element_located(new_locator)
-                )
+                element = driver.find_element(By.XPATH, xpath)
 
-                logger.info(f"Healed locator success : {new_locator}")
+                logger.info(f"Recovered using AI locator : {xpath}")
 
                 return element
 

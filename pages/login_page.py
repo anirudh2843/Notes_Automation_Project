@@ -21,6 +21,7 @@ class LoginPage(BasePage):
 
     def __init__(self, driver):
         super().__init__(driver)
+        
 
     # Open Login Page
     def go_to_login_page(self):
@@ -42,7 +43,7 @@ class LoginPage(BasePage):
                 EC.visibility_of_element_located(self.logout_btn)
             ).is_displayed()
 
-        except:
+        except Exception:
             return False
 
     def is_error_displayed(self):
@@ -51,5 +52,5 @@ class LoginPage(BasePage):
                 EC.visibility_of_element_located(self.error_message)
             ).is_displayed()
 
-        except:
+        except Exception:
             return False

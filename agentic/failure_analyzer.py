@@ -15,6 +15,6 @@ class FailureAnalyzer:
             return "Synchronization Failure"
 
         if isinstance(exception, ElementClickInterceptedException):
-            return "Click Intercepted"
+            return "UI Overlay Issue"
 
         return "Unknown Failure"
